@@ -1,5 +1,0 @@
-<service>
-  <allow>
-    <principal>role:cms.cm.app</principal>
-  </allow>
-</service>
