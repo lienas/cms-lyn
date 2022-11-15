@@ -1,0 +1,40 @@
+= Webpack Starter for Enonic XP
+
+This starter kit will set up a basic template for your new Enonic app, with support for the Webpack.
+
+NOTE: See the official https://developer.enonic.com/start/starter-webpack[documentation] for a more detailed guide.
+
+== Introduction
+
+Once initiated, you'll have the bare minimum needed to create a new Enonic
+application with Webpack. You'll have all the folders set up, and can get
+straight to creating what you're creating.
+
+The project will support:
+
+* Code minification;
+* Production and development environments;
+* SASS and Less support;
+* Transpilation of ECMAScript code with Babel (client- and server-side);
+* Transpilation of TypeScript code (client- and server-side).
+
+== Create a project
+
+To setup a project locally, simply run the following command:
+
+```bash
+$ enonic project create
+```
+Complete the Wizard and make sure you choose *Webpack starter* from the list of starters
+
+```bash
+$ cd <project-folder>
+```
+
+To build and deploy the project:
+
+```bash
+$ enonic project deploy
+```
+
+NOTE: *Don't have the Enonic CLI?* Visit the https://developer.enonic.com/start[Getting started guide] to install it.
