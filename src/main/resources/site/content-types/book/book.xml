@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<content-type xmlns="urn:enonic:xp:model:1.0">
+    <display-name>Buch</display-name>
+    <description>Buchdetails</description>
+    <super-type>base:structured</super-type>
+    <form>
+        <input name="featured" type="CheckBox">
+            <label>Hervorheben</label>
+            <help-text>Das Buch wird in der Serie nicht angezeigt, sollte daher als Featured Book angezeigt werden!
+            </help-text>
+            <config>
+                <alignment>right</alignment>
+            </config>
+        </input>
+        <input name="subtitle" type="TextLine">
+            <label>Untertitel</label>
+        </input>
+
+        <input name="content" type="HtmlArea">
+            <label>Klappentext</label>
+            <default>
+                <h3>Klappentext</h3>
+            </default>
+            <config>
+                <allowHeadings>h2 h4 h6</allowHeadings>
+            </config>
+        </input>
+
+        <input name="series" type="TextLine">
+            <label>Serie</label>
+        </input>
+
+        <input name="episode" type="Long">
+            <label>Folge</label>
+            <default>1</default>
+            <config>
+                <min>0</min>
+                <max>99</max>
+            </config>
+        </input>
+
+        <input name="ISBN11" type="TextLine">
+            <label>ISBN 11 Nummer</label>
+            <occurrences minimum="0" maximum="1"/>
+            <help-text>Format 000-0-00000-000-0</help-text>
+            <config>
+                <min-length>17</min-length>
+                <max-length>17</max-length>
+                <regexp>\b\d{3}-\d{1}-\d{5}-\d{3}-\d{1}\b</regexp>
+            </config>
+        </input>
+        <input name="ISBN13" type="TextLine">
+            <label>ISBN 13 Nummer</label>
+            <occurrences minimum="0" maximum="1"/>
+            <help-text>Format 000-0000000000</help-text>
+            <config>
+                <min-length>17</min-length>
+                <max-length>17</max-length>
+                <regexp>\b\d{3}-\d{10}\b</regexp>
+            </config>
+        </input>
+        <input name="author" type="TextLine">
+            <label>Autor(in)</label>
+        </input>
+
+        <input name="published" type="Date">
+            <label>Erstveröffentlichung</label>
+        </input>
+
+        <input name="pages" type="Long">
+            <label>Anzahl der Seiten</label>
+            <config>
+                <min>1</min>
+                <max>1000</max>
+            </config>
+        </input>
+
+        <input name="cover" type="ImageSelector">
+            <label>Buchcover</label>
+            <occurrences minimum="0" maximum="1"/>
+            <config>
+                <allowPath>${site}/*</allowPath>
+                <treeMode>true</treeMode>
+                <showStatus>true</showStatus>
+                <hideToggleIcon>true</hideToggleIcon>
+            </config>
+        </input>
+
+        <input name="characters" type="ContentSelector">
+            <label>Darsteller</label>
+            <occurrences minimum="0" maximum="0"/>
+            <config>
+                <allowContentType>de.osde.react4xptest:character</allowContentType>
+                <treeMode>false</treeMode>
+                <showStatus>true</showStatus>
+                <hideToggleIcon>false</hideToggleIcon>
+            </config>
+        </input>
+
+        <input name="amazon-url" type="TextLine">
+            <label>Url auf Amazon</label>
+        </input>
+    </form>
+
+</content-type>

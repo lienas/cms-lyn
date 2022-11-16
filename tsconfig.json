@@ -6,8 +6,16 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "rootDirs": [
+      "./src/main/resources",
+      "./.xp-codegen"
+    ]
   },
+  "include": [
+    "./.xp-codegen/**/*",
+    "./src/main/resources/**/*"
+  ],
   "exclude": [
     "./build/*"
   ]

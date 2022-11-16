@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<content-type>
+    <display-name>Darsteller</display-name>
+    <description>im Buch enthaltener Darsteller</description>
+    <super-type>base:structured</super-type>
+    <form>
+
+        <input name="name" type="TextLine">
+          <label>Name</label>
+        </input>
+
+        <input name="profile" type="HtmlArea">
+          <label>Profil</label>
+          <default><h3>Beschreibung Charakters</h3></default>
+          <config>
+            <exclude>*</exclude>
+            <include>*</include>
+            <allowHeadings>h2 h4 h6</allowHeadings>
+          </config>
+        </input>
+
+        <input name="photo" type="ImageSelector">
+          <label>Photo</label>
+          <occurrences minimum="0" maximum="1"/>
+          <config>
+            <allowPath>${site}/*</allowPath>
+            <treeMode>false</treeMode>
+            <showStatus>true</showStatus>
+            <hideToggleIcon>false</hideToggleIcon>
+          </config>
+        </input>
+
+    </form>
+
+</content-type>

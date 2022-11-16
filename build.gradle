@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id "com.github.node-gradle.node" version '3.3.0'
     id 'com.enonic.xp.app' version '3.1.0'
+    id 'no.item.xp.codegen' version '2.0.1'
 }
 
 app {
@@ -52,16 +53,7 @@ task cleanNode( type: org.gradle.api.tasks.Delete ) {
     delete 'node_modules'
 }
 
-task clientWebpack( type: NodeTask, dependsOn: npmInstall ) {
-    environment = [ 'NODE_ENV': nodeEnvironment() ]
-    args = [ '--config', 'webpack.client.config.js', '--color' ]
-    description = 'Build UI resources (js, css, etc).'
-    inputs.dir 'src/main'
-    outputs.dir "${buildDir}/resources/main"
-    script = file( 'node_modules/webpack-cli/bin/cli.js' )
-}
-
-task serverWebpack( type: NodeTask, dependsOn: npmInstall ) {
+task serverWebpack( type: NodeTask, dependsOn:  [ npmInstall, generateTypeScript ] ) {
     environment = [ 'NODE_ENV': nodeEnvironment() ]
     // args = [ '--config', 'webpack.server.config.babel.js', '--color', '--hide-modules' ]
     args = [ '--config', 'webpack.server.config.js', '--color' ]
@@ -91,8 +83,7 @@ jar {
     exclude 'assets/styles/**/*.sass'
     exclude 'assets/styles/**/*.scss'
     exclude 'assets/styles/**/*.js'
-
-    dependsOn += clientWebpack
+    dependsOn += generateTypeScript
     dependsOn += serverWebpack
 }
 
