@@ -10,7 +10,12 @@
     "rootDirs": [
       "./src/main/resources",
       "./.xp-codegen"
-    ]
+    ],
+    "paths": {
+      "/lib/xp/*": ["./node_modules/@enonic-types/lib-*"],
+      "/lib/*": [ "./node_modules/@item-enonic-types/lib-*" ,"./src/main/resources/lib/*"],
+      "/site/*": ["./.xp-codegen/site/*"]
+    }
   },
   "include": [
     "./.xp-codegen/**/*",
