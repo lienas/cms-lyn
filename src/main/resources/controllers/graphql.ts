@@ -27,7 +27,7 @@ exports.options = function () {
     };
 };
 
-exports.get = function (req) {
+exports.get = function (req: XP.CustomSelectorServiceRequest) {
     if (req.webSocket) {
         return {
             webSocket: {
@@ -44,7 +44,7 @@ exports.get = function (req) {
     };
 };
 
-exports.post = function (req) {
+exports.post = function (req: XP.CustomSelectorServiceRequest) {
     let input = JSON.parse(req.body);
 
     let params = {
