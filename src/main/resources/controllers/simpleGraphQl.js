@@ -1,12 +1,5 @@
 const guillotineLib = require('/lib/guillotine');
-const libGraphQL = require('/lib/graphql');
 const graphqlPlaygroundLib = require('/lib/graphql-playground');
-const libGraphQlSchema = require('/lib/graphQlSchema');
-
-//──────────────────────────────────────────────────────────────────────────────
-// Schema
-//──────────────────────────────────────────────────────────────────────────────
-const schema = libGraphQlSchema.createCustomSchema();
 
 //──────────────────────────────────────────────────────────────────────────────
 // Constants
@@ -27,8 +20,7 @@ exports.options = function () {
     };
 };
 
-exports.get = function (req: XP.CustomSelectorServiceRequest) {
-    log.info("GraphQL-Playground was called");
+exports.get = function (req) {
     if (req.webSocket) {
         return {
             webSocket: {
@@ -45,7 +37,7 @@ exports.get = function (req: XP.CustomSelectorServiceRequest) {
     };
 };
 
-exports.post = function (req: XP.CustomSelectorServiceRequest) {
+exports.post = function (req) {
     let input = JSON.parse(req.body);
 
     let params = {
@@ -53,13 +45,10 @@ exports.post = function (req: XP.CustomSelectorServiceRequest) {
         variables: input.variables
     };
 
-    const result = libGraphQL.execute(schema, params.query, params.variables);
-    //log.info("result of graphQl :: %s", JSON.stringify(result, null, 2));
-
     return {
         contentType: 'application/json',
         headers: CORS_HEADERS,
-        body: JSON.stringify(result)
+        body: guillotineLib.execute(params)
     };
 };
 

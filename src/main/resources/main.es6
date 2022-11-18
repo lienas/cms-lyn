@@ -1,3 +1,1 @@
-import { init } from './lib/observe/observe';
-
-init();
+log.info('Hello from CMS :: Lyn Konner ')

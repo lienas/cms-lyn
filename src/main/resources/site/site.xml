@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<site>
+<site xmlns="urn:enonic:xp:model:1.0">
   <form/>
+  <mappings>
+    <mapping controller="/controllers/simpleGraphQl.js" order="50">
+      <pattern>/graphql</pattern>
+    </mapping>
+<!--    <mapping controller="/lib/nextjs-proxy/proxy.js" order="99">-->
+<!--      <pattern>/.*</pattern>-->
+<!--    </mapping>-->
+    <mapping controller="/site/pages/main/main.js" order="60">
+      <pattern>/.*</pattern>
+    </mapping>
+  </mappings>
 </site>
