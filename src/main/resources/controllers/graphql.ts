@@ -1,7 +1,7 @@
 const guillotineLib = require('/lib/guillotine');
-const libGraphQL = require('/lib/graphql');
+//const libGraphQL = require('/lib/graphql');
 const graphqlPlaygroundLib = require('/lib/graphql-playground');
-const libGraphQlSchema = require('/lib/graphQlSchema');
+const libGraphQlSchema = require('../lib/graphQlSchema');
 
 //──────────────────────────────────────────────────────────────────────────────
 // Schema
@@ -49,11 +49,12 @@ exports.post = function (req: XP.CustomSelectorServiceRequest) {
     let input = JSON.parse(req.body);
 
     let params = {
+        schema: schema,
         query: input.query,
         variables: input.variables
     };
 
-    const result = libGraphQL.execute(schema, params.query, params.variables);
+    const result = guillotineLib.execute(params);
     //log.info("result of graphQl :: %s", JSON.stringify(result, null, 2));
 
     return {

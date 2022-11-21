@@ -1,5 +1,10 @@
 const guillotineLib = require('/lib/guillotine');
 const graphqlPlaygroundLib = require('/lib/graphql-playground');
+const libGraphQlSchema = require("../lib/graphQlSchema");
+//──────────────────────────────────────────────────────────────────────────────
+// Schema
+//──────────────────────────────────────────────────────────────────────────────
+const schema = libGraphQlSchema.createCustomSchema();
 
 //──────────────────────────────────────────────────────────────────────────────
 // Constants
@@ -41,6 +46,7 @@ exports.post = function (req) {
     let input = JSON.parse(req.body);
 
     let params = {
+        schema: schema,
         query: input.query,
         variables: input.variables
     };

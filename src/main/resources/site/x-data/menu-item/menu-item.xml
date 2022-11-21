@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	DESCRIPTION:
+	Based on "example-standard" but also adds a checkbox for "Open in new window" to all content. Handy for external URLs.
+-->
+<x-data>
+    <display-name>Menu settings</display-name>
+    <form>
+        <input type="Checkbox" name="menuItem">
+            <label>Show in menu?</label>
+            <help-text>Check this to include this content in the menu.</help-text>
+            <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="TextLine" name="menuName">
+            <label>Override menu name</label>
+            <help-text>Name to be used in menu, default is to use the content's DisplayName.</help-text>
+            <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="Checkbox" name="newWindow">
+            <label>Open in new window?</label>
+            <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="ComboBox" name="Icon">
+            <label>Menü-Icon</label>
+            <occurrences minimum="0" maximum="0"/>
+            <help-text>Zeit ein Icon vor dem Menütext</help-text>
+            <config>
+                <option value="one">Option One</option>
+                <option value="two">Option Two</option>
+            </config>
+        </input>
+    </form>
+</x-data>

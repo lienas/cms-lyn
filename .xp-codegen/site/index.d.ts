@@ -4,7 +4,15 @@ export type SiteConfig = XP.SiteConfig;
 declare global {
   namespace XP {
     interface SiteConfig {
+      /**
+       * NextJS server URL
+       */
+      nextjsUrl?: string;
 
+      /**
+       * NextJS API token
+       */
+      nextjsToken?: string;
     }
   }
 }

@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site xmlns="urn:enonic:xp:model:1.0">
-  <form/>
+  <x-data name="menu-item" />
+  <form>
+    <input type="TextLine" name="nextjsUrl">
+      <label>NextJS server URL</label>
+      <default>http://localhost:3000</default>
+    </input>
+    <input type="TextLine" name="nextjsToken">
+      <label>NextJS API token</label>
+    </input>
+  </form>
   <mappings>
-    <mapping controller="/controllers/simpleGraphQl.js" order="50">
+    <mapping controller="/controllers/_graphql.js" order="50">
       <pattern>/graphql</pattern>
     </mapping>
-<!--    <mapping controller="/lib/nextjs-proxy/proxy.js" order="99">-->
-<!--      <pattern>/.*</pattern>-->
-<!--    </mapping>-->
+    <mapping controller="/lib/nextjs/proxy.js" order="55">
+      <pattern>/.*</pattern>
+    </mapping>
     <mapping controller="/site/pages/main/main.js" order="60">
       <pattern>/.*</pattern>
     </mapping>
