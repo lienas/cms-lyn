@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<layout xmlns="urn:enonic:xp:model:1.0">
+    <display-name>Container</display-name>
+    <description>1 Spalte mit Rand</description>
+    <form>
+        <input type="ComboBox" name="size">
+            <label>Größe Container</label>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <option value = "sm">klein</option>
+                <option value = "md">mittel</option>
+                <option value = "lg">groß</option>
+                <option value = "xl">extra groß</option>
+            </config>
+            <default>lg</default>
+        </input>
+        <input type="ComboBox" name="padY">
+            <label>Innenabstand oben/unter</label>
+            <help-text>Der Abstand ist abhängig von der Einstellung im Theme</help-text>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <option value = "0">keiner</option>
+                <option value = "0.5">0,5</option>
+                <option value = "1">1</option>
+                <option value = "1.5">1,5</option>
+                <option value = "2">2</option>
+                <option value = "2.5">2,5</option>
+                <option value = "3">3</option>
+                <option value = "3.5">3,5</option>
+                <option value = "4">4</option>
+                <option value = "5">5</option>
+                <option value = "6">6</option>
+                <option value = "7">7</option>
+                <option value = "8">8</option>
+                <option value = "9">9</option>
+                <option value = "10">10</option>
+            </config>
+            <default>5</default>
+
+        </input>
+    </form>
+    <regions>
+        <region name="container"/>
+    </regions>
+</layout>

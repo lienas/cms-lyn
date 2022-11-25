@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part xmlns="urn:enonic:xp:model:1.0">
+    <display-name>Banner</display-name>
+    <description>Banner mit Bild und OverlayText</description>
+    <form>
+        <input name="header" type="TextLine">
+            <label>Überschrift</label>
+            <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input name="teaser" type="HtmlArea">
+            <label>Text</label>
+            <default>
+                <p>Enter description here</p>
+            </default>
+        </input>
+        <input name="image" type="ImageSelector">
+            <label>Anzuzeigendes Bild</label>
+            <occurrences minimum="0" maximum="1"/>
+            <config>
+                <allowPath>${site}/*</allowPath>
+                <treeMode>true</treeMode>
+                <showStatus>true</showStatus>
+                <hideToggleIcon>false</hideToggleIcon>
+            </config>
+        </input>
+    </form>
+</part>

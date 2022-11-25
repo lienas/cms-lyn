@@ -17,8 +17,8 @@
     <mapping controller="/lib/nextjs/proxy.js" order="55">
       <pattern>/.*</pattern>
     </mapping>
-    <mapping controller="/site/pages/main/main.js" order="60">
-      <pattern>/.*</pattern>
-    </mapping>
+<!--    <mapping controller="/site/pages/main/main.js" order="60">-->
+<!--      <pattern>/.*</pattern>-->
+<!--    </mapping>-->
   </mappings>
 </site>
