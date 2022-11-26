@@ -1,0 +1,25 @@
+<content-type xmlns="urn:enonic:xp:model:1.0">
+    <display-name>Buchserie</display-name>
+    <super-type>base:structured</super-type>
+    <form>
+        <input name="description" type="HtmlArea">
+          <label>Beschreibung</label>
+          <default><h3>Enter description here</h3></default>
+          <config>
+            <exclude>*</exclude>
+            <include>JustifyLeft JustifyRight | Bold Italic</include>
+            <allowHeadings>h2 h4 h6</allowHeadings>
+          </config>
+        </input>
+        <input name="image" type="ImageSelector">
+          <label>Serien-Image</label>
+          <occurrences minimum="0" maximum="1"/>
+          <config>
+            <allowPath>${site}/*</allowPath>
+            <treeMode>true</treeMode>
+            <showStatus>true</showStatus>
+            <hideToggleIcon>true</hideToggleIcon>
+          </config>
+        </input>
+    </form>
+</content-type>
