@@ -101,3 +101,4 @@ npm-debug.log
 ### Project ###
 *.map
 /.xp-codegen/
+/.xp-codegen/
