@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<part xmlns="urn:enonic:xp:model:1.0">
+    <display-name>Booklist</display-name>
+    <description>Liste von Büchern</description>
+    <form>
+        <input name="series" type="ContentSelector">
+          <label>Buchserie</label>
+            <help-text>filtert die Liste auf die übermittelte Serie</help-text>
+          <occurrences minimum="0" maximum="1"/>
+          <config>
+            <allowContentType>de.lyn.be:series</allowContentType>
+            <allowPath>${site}/people/</allowPath>
+            <allowPath>./*</allowPath>
+            <treeMode>true</treeMode>
+            <showStatus>true</showStatus>
+            <hideToggleIcon>false</hideToggleIcon>
+          </config>
+        </input>
+    </form>
+</part>
