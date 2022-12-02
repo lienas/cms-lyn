@@ -9,6 +9,10 @@
           <label>Name</label>
         </input>
 
+        <input name="role" type="TextLine">
+          <label>Rolle</label>
+        </input>
+
         <input name="profile" type="HtmlArea">
           <label>Profil</label>
           <default><h3>Beschreibung Charakters</h3></default>
