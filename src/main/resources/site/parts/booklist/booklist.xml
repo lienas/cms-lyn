@@ -5,17 +5,23 @@
     <description>Liste von Büchern</description>
     <form>
         <input name="series" type="ContentSelector">
-          <label>Buchserie</label>
+            <label>Buchserie</label>
             <help-text>filtert die Liste auf die übermittelte Serie</help-text>
-          <occurrences minimum="0" maximum="1"/>
-          <config>
-            <allowContentType>de.lyn.be:series</allowContentType>
-            <allowPath>${site}/people/</allowPath>
-            <allowPath>./*</allowPath>
-            <treeMode>true</treeMode>
-            <showStatus>true</showStatus>
-            <hideToggleIcon>false</hideToggleIcon>
-          </config>
+            <occurrences minimum="0" maximum="1"/>
+            <config>
+                <allowContentType>de.lyn.be:series</allowContentType>
+                <allowPath>${site}/people/</allowPath>
+                <allowPath>./*</allowPath>
+                <treeMode>true</treeMode>
+                <showStatus>true</showStatus>
+                <hideToggleIcon>false</hideToggleIcon>
+            </config>
+        </input>
+
+        <input name="title" type="TextLine">
+            <label>Titel</label>
+            <help-text>einen Titel über der Liste anzeigen-im Standard wir der Name der Serie angezeigt</help-text>
+            <occurrences minimum="0" maximum="1"/>
         </input>
     </form>
 </part>

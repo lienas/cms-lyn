@@ -11,6 +11,7 @@
             <allowHeadings>h2 h4 h6</allowHeadings>
           </config>
         </input>
+
         <input name="image" type="ImageSelector">
           <label>Serien-Image</label>
           <occurrences minimum="0" maximum="1"/>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<part xmlns="urn:enonic:xp:model:1.0">
+    <display-name>Bücher und Darsteller der Serie</display-name>
+    <description>gibt eine Vorschau der Bücher und Darsteller der Serie aus (funktioniert nur auf einer Serienseite)</description>
+    <form/>
+</part>
