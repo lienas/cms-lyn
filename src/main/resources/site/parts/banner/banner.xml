@@ -4,9 +4,9 @@
     <description>Banner mit Bild und OverlayText</description>
     <form>
         <input name="height" type="Long">
-          <label>Höhe in Prozent</label>
+            <label>Höhe in Prozent</label>
             <help-text>Wert von 25 bis 100</help-text>
-          <default>100</default>
+            <default>100</default>
             <config>
                 <min>25</min>
                 <max>100</max>
@@ -17,12 +17,62 @@
             <label>Überschrift</label>
             <occurrences minimum="1" maximum="1"/>
         </input>
+
         <input name="teaser" type="HtmlArea">
             <label>Text</label>
             <default>
                 <p>Enter description here</p>
             </default>
         </input>
+
+        <field-set>
+            <label>Countdown-Timer</label>
+            <items>
+                <input name="hasTimer" type="CheckBox">
+                    <label>aktivieren</label>
+                    <help-text>aktiviert den angegeben Timer</help-text>
+                    <config>
+                        <alignment>left</alignment>
+                    </config>
+                </input>
+
+                <input name="timerDate" type="Date">
+                    <label>Zieldatum</label>
+                    <default>2022-12-03</default>
+                </input>
+            </items>
+        </field-set>
+
+        <field-set>
+            <label>Link auf eine Seite</label>
+            <items>
+
+                <input name="hasLink" type="CheckBox">
+                    <label>aktivieren</label>
+                    <config>
+                        <alignment>left</alignment>
+                    </config>
+                </input>
+
+                <input name="linkTarget" type="ContentSelector">
+                    <label>My ContentSelector</label>
+                    <occurrences minimum="0" maximum="1"/>
+                    <config>
+                        <treeMode>true</treeMode>
+                        <showStatus>true</showStatus>
+                        <hideToggleIcon>false</hideToggleIcon>
+                    </config>
+                </input>
+                <!-- Basic sample -->
+                <input name="linkText" type="TextLine">
+                    <label>Beschriftung</label>
+                    <help-text>Call to Action für den Link</help-text>
+                    <default>mehr erfahren</default>
+                </input>
+            </items>
+        </field-set>
+
+
         <input name="image" type="ImageSelector">
             <label>Anzuzeigendes Bild</label>
             <occurrences minimum="0" maximum="1"/>
@@ -33,5 +83,6 @@
                 <hideToggleIcon>false</hideToggleIcon>
             </config>
         </input>
+
     </form>
 </part>
