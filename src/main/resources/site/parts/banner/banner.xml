@@ -40,6 +40,19 @@
                     <label>Zieldatum</label>
                     <default>2022-12-03</default>
                 </input>
+
+                <input name="hasText" type="CheckBox">
+                    <label>Text mit Datum anzeigen</label>
+                    <config>
+                        <alignment>left</alignment>
+                    </config>
+                </input>
+
+                <input name="timerText" type="TextLine">
+                    <label>Text vor Datum</label>
+                    <default>erscheint am</default>
+                </input>
+
             </items>
         </field-set>
 
