@@ -6,6 +6,11 @@ export interface Character {
   name?: string;
 
   /**
+   * Rolle
+   */
+  role?: string;
+
+  /**
    * Profil
    */
   profile?: string;
@@ -14,6 +19,11 @@ export interface Character {
    * Photo
    */
   photo?: string;
+
+  /**
+   * Video
+   */
+  video?: string;
 
   /**
    * GraphQL name. Also used for separating unions in TypeScript

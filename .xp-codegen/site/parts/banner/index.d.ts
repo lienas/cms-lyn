@@ -16,7 +16,47 @@ export interface Banner {
   teaser?: string;
 
   /**
+   * aktivieren
+   */
+  hasTimer: boolean;
+
+  /**
+   * Zieldatum
+   */
+  timerDate?: string;
+
+  /**
+   * Text mit Datum anzeigen
+   */
+  hasText: boolean;
+
+  /**
+   * Text vor Datum
+   */
+  timerText?: string;
+
+  /**
+   * aktivieren
+   */
+  hasLink: boolean;
+
+  /**
+   * My ContentSelector
+   */
+  linkTarget?: string;
+
+  /**
+   * Beschriftung
+   */
+  linkText?: string;
+
+  /**
    * Anzuzeigendes Bild
    */
   image?: string;
+
+  /**
+   * Bild in Schwarz-Weiss
+   */
+  grayscale: boolean;
 }

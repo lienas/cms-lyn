@@ -96,6 +96,13 @@
                 <hideToggleIcon>false</hideToggleIcon>
             </config>
         </input>
+        <input name="grayscale" type="CheckBox">
+            <label>Bild in Schwarz-Weiss</label>
+            <default>false</default>
+            <config>
+                <alignment>left</alignment>
+            </config>
+        </input>
 
     </form>
 </part>
