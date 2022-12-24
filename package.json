@@ -1,7 +1,7 @@
 {
-  "name": "starter-webpack",
-  "version": "1.0.0",
-  "description": "My Enonic XP project",
+  "name": "cms-lyn",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "enonic-Backend Lyn Konner",
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
