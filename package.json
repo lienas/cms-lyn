@@ -15,7 +15,7 @@
     "@babel/plugin-proposal-class-properties": "^7.16.5",
     "@babel/preset-env": "^7.18.0",
     "@babel/register": "^7.17.7",
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.13",
     "babel-loader": "^8.2.5",
     "browserslist-config-enonic": "^1.0.7",
     "cross-env": "^7.0.3",
