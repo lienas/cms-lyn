@@ -20,7 +20,7 @@
     "browserslist-config-enonic": "^1.0.7",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
-    "cssnano": "^5.1.9",
+    "cssnano": "^5.1.15",
     "enonic-types": "^7.11.0",
     "file-loader": "^6.2.0",
     "glob": "^8.0.3",
